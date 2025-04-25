@@ -13,14 +13,21 @@
         font-size: 30px;
       }
 
-      .navbar {
-        background-color: #F4DBD8;
+      .navbar .nav-link{
+        margin-left: 0px;
+        margin-right: 0px;
       }
 
       .navbar-brand {
         font-size: 2.5rem;
         font-weight: bold;
         color: #5D4037;
+      }
+
+      .navbar-brand:hover,
+      .navbar-brand:focus {
+        color:#352621;
+        text-decoration: none;
       }
 
       .hero {
@@ -71,25 +78,83 @@
         line-height: 1.8;
       }
 
+      .carousel-caption {
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6)
+      }
+
+
+      .caption-ruffle{
+        color: #fba6df
+      }
+
+      .caption-cat{
+        color:rgb(174, 217, 250);
+      }
+
+      .caption-bowl{
+        color: rgb(255, 228, 106);
+
+      }
+
+      .custom-size {
+        max-height: 600px;
+        object-fit: contain;
+        width: auto;
+        margin: 0 auto;
+      }
+
+      .custom-button{
+        background-color: #f4bfbf;
+        color:#5d4037;
+      }
+
+      .custom-button:hover{
+        background-color: #f29c9c;
+        color: #fff;
+      }
+
+      .brand-text {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color:#5D4037;
+      }
+
+      header {
+      background-color: #e6c3bd;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      }
+
     </style>
   </head>
   <body>
-
-    <nav class= "navbar navbar-expand-lg">
-      <div class= "container">
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
         <a class="navbar-brand d-flex align-items-center" href="#">
-          <img src="Logo.png" alt="logo" style="width: 300px; margin-left:1px;">
-          Hooked by Hana
-
+          <img src="Logo.png" alt="logo" style="width: 300px; margin-left: 5px;">
+          <span class="brand-text">Hooked by Hana</span>
         </a>
-        <div class="ms-auto">
-          <a class="nav-link d-inline me-3" href="#">Home</a>
-          <a class="nav-link d-inline me-3" href="#">FAQ</a>
-          <a class="nav-link d-inline" href="#">Order</a>
+        <div class="ml-auto">
+          <ul class="navbar-nav flex-row">
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="FAQ.html">FAQ</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="Order.html">Order</a>
+            </li>
+          </ul>
         </div>
-        </div>
+      </div>
     </nav>
-    <section class="hero">
+    </header>
+    </body>
+    <section id="home" class="hero">
       <h1>Handcrafted Crochet Pieces</h1>
     </section>
     <section class="welcome-section">
@@ -110,23 +175,23 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="ruffle.png" class="d-block w-100" alt="Ruffle Hat">
-            <div class="carousel-caption d-none d-md-block">
+            <div class="carousel-caption caption-ruffle d-none d-md-block">
               <h5>Ruffle Hat</h5>
               <p>Perfect for any season!</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src= "yoda.png" class="d-block w-100" alt="Cat Ear Hat">
-            <div class="carousel-caption d-none d-md-block">
+            <img src= "yoda.png" class="d-block w-100 custom-size" alt="Cat Ear Hat">
+            <div class="carousel-caption caption-cat d-none d-md-block">
               <h5>Cat Ear Hat</h5>
-              <p>Made with love and warmth.</p>
+              <p>Stylish and Cozy!</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="https://via.placeholder.com/700x400?text=Decor" class="d-block w-100" alt="Decor">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Charming Decor</h5>
-              <p>Add handmade vibes to your home.</p>
+            <img src="bowl.png" class="d-block w-100 custom-size" alt="Custom Colors">
+            <div class="carousel-caption caption-bowl d-none d-md-block">
+              <h5>Custom Orders!</h5>
+              <p>Many colors/styles to choose from!</p>
             </div>
           </div>
         </div>
@@ -139,6 +204,8 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <p>See something you like? Place an order now!</p>
+      <a href="Order.html" type="button" class="btn btn-primary btn-lg mt-4 custom-button">Order Now</a>
     </section>
     <nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
